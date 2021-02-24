@@ -1,0 +1,18 @@
+steps:
+  - group: "Group 1"
+    steps:
+    - label: ":ubuntu:"
+    - command: echo "Group 1, step 1"
+    - command: echo "Group 1, step 2"
+
+  - group: "Group 2"
+    steps:
+    - label: "pfsense"
+    - command: echo "Group 2, step 1"
+    - command: echo "Group 2, step 2"
+
+  - group: ~
+    steps:
+    - label: ":thisisfine:"
+    - command: echo "No group name, step 1"
+    - command: echo "No group name, step 2"
