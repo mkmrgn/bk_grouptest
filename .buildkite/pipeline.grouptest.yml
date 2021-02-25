@@ -7,7 +7,7 @@ steps:
     steps:
     - command: echo "Group 2, step 1"
 
-  - command: buildkite-agent annotate --style "info" "```term \x1b[31mFailure/Error:\x1b[0m \x1b[32mexpect\x1b[0m(new_item.created_at).to eql(now)```"
+  - command: buildkite-agent annotate --style "info" "\`\`\`term \x1b[31mFailure/Error:\x1b[0m \x1b[32mexpect\x1b[0m(new_item.created_at).to eql(now)\`\`\`"
 
   - command: |
       buildkite-agent annotate --style "info" "```term
