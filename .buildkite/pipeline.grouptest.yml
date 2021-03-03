@@ -7,6 +7,5 @@ steps:
     steps:
     - command: echo "Group 2, step 1"
 
-  - command: |
-      - echo ${BUILDKITE_BUILD_NUMBER}
-      - sh annotate.sh
+  - command: echo ${BUILDKITE_BUILD_NUMBER}
+  - command: sh annotate.sh
