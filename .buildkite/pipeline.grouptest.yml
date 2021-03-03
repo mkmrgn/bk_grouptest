@@ -8,4 +8,4 @@ steps:
     - command: echo "Group 2, step 1"
 
   - command: |
-      sh annotate.sh | buildkite-agent annotate 
+      sh annotate.sh

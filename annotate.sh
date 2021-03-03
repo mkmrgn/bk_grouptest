@@ -5,4 +5,4 @@ echo "\`\`\`terminal
 \x1b[31m       got: 2018-06-20 19:42:26.290538000 +0000\x1b[0m
 
 \x1b[31m  (compared using eql?)\x1b[0m\`\`\`
-"
+" | buildkite-agent annotate
