@@ -2,7 +2,7 @@ steps:
   - group: "Group 1"
     steps:
     - command: echo "Group 1, step 1"
-
+.
   - group: "Group 2"
     steps:
     - command: echo "Group 2, step 1"
