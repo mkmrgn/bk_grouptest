@@ -12,5 +12,5 @@ steps:
   - command: echo ${BUILDKITE_BUILD_NUMBER}
   #- command: sh annotate.sh
 
-  - plugins:
-      - thedyrt/git-commit#v0.3.0: ~
+  plugins:
+    - thedyrt/git-commit#v0.3.0: ~
