@@ -7,4 +7,4 @@ steps:
       build.author.name !~ /buildsystem/ && build.branch =~ /development/
     agents:
       queue: "deploy"
-    message: "dfgfdgdfgfgd"
+    message: "${BUILDKITE}"
