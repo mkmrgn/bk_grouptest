@@ -3,7 +3,7 @@ steps:
     steps:
     - command: echo "Group 1, step 1"
       label: ":hammer: Group 1"
-.
+
   - group: "Group 2"
     steps:
     - command: echo "Group 2, step 1"
