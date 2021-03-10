@@ -1,17 +1,9 @@
 steps:
-  - command: "Tools/Buildkite/BuildkiteCompileEditor.bat"
+  - command: "something.bat"
     label: "Push"
     if: |
       // Don't trigger builds from commits made by the build system
       // Note: This only skips step, we also skip the build completely with [skip ci].
-      build.author.name !~ /osg-buildsystem/ && build.branch =~ /development/
+      build.author.name !~ /buildsystem/ && build.branch =~ /development/
     agents:
       queue: "deploy"
-    plugins:
-      - thedyrt/git-commit#v0.3.0:
-    add:
-      - RTA/Binaries/Win64
-      - RTA/Plugins/FMODStudio/Binaries/Win64
-      - RTA/Plugins/UIWS/Binaries/Win64
-    # Skip creating a new Buildkite build when we push binaries.
-    message: "Updated editor binaries #${build.number} [skip ci]"
