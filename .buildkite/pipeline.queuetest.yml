@@ -1,0 +1,13 @@
+agents:
+  queue: test
+steps:
+  - label: build
+    branches: "!master"
+    commands:
+      - /bin/bash annotate.sh
+      - wait: ~
+  - label: test release
+    branches: "!master"
+    commands:
+      - /bin/bash echo "lol"
+      - wait: ~
