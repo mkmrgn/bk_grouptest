@@ -1,5 +1,3 @@
-agents:
-  queue: tester
 steps:
   - label: build
     branches: "!master"
@@ -11,3 +9,5 @@ steps:
     commands:
       - /bin/bash echo "lol"
       - wait: ~
+agents:
+  queue: tester
