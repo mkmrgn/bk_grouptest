@@ -1,13 +1,21 @@
-steps:
-  - label: build
-    branches: "!master"
-    commands:
-      - /bin/bash annotate.sh
-      - wait: ~
-  - label: test release
-    branches: "!master"
-    commands:
-      - /bin/bash echo "lol"
-      - wait: ~
+# Some code changes, such as editing a Readme, may not require a Buildkite build. If you want Buildkite to ignore a commit, add [ci skip] or [skip ci] anywhere in the commit message.
+
+
 agents:
-  queue: tester
+  queue: machine-registry
+  
+steps:
+#  - label: writeaccess
+#    commands:
+#      - /bin/bash ../cypress-clean/run_as_root.sh
+#
+#    agents:
+#      queue: machine-buildkite
+#    WARNING ADD THIS STEP TO PIPELINE CONFIGURATION
+#
+#  - wait
+
+  - label: test
+    key: test
+    commands:
+      - /bin/bash .buildkite/test.sh
