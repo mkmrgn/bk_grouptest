@@ -5,4 +5,4 @@ steps:
   - label: test
     key: test
     commands:
-      - /bin/bash .buildkite/test.sh
+      - echo "hey this worked"
