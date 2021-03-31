@@ -2,7 +2,14 @@ agents:
   queue: tester
   
 steps:
-  - label: test
-    key: test
+  - label: conditional1
+    command: echo "this shouldn't print (passed)"
+    if: build.state == "passed"
+
+  - label: conditional2
+    command: echo "this should print (running)"
+    if: build.state == "running"
+
+  - label: done
     commands:
-      - echo "hey this worked"
+      - echo "this is the end"
