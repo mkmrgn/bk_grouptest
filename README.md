@@ -1,2 +1,2 @@
 # bk_grouptest
-hello
+hello this is a test
