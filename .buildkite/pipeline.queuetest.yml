@@ -1,15 +1,10 @@
+env:
+  MIKE_TEST: lol_mike_test
+
 agents:
   queue: tester
   
 steps:
-  - label: conditional1
-    command: echo "this shouldn't print (passed)"
-    if: build.state == "passed"
-
-  - label: conditional2
-    command: echo "this should print (running)"
-    if: build.state == "running"
-
   - label: done
     commands:
-      - echo "this is the end"
+      - echo $MIKE_TEST
